@@ -1,0 +1,239 @@
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'montserrat',sans-serif ;
+            }            
+            body{
+                background-image: url("https://www.cabothealth.com.au/wp-content/uploads/2019/12/Cabot-Health-Liver-Function-Test.jpg");
+                padding: 0px 10px;
+                background-size: cover;
+            }
+            .container{
+                max-width: 500px;
+                width: 100%;
+                background: transparent;
+                margin: 20px auto;
+                padding: 30px;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+            }
+            .container .title{
+                font-size: 25px;
+                font-weight: 1000px;
+                margin-bottom: 25px;
+                color: red;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .container .form{
+                width: 100%;
+            }
+
+            .container .form .input_field{
+                color: rgb(0, 173, 9);
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            }
+            .container .form .input_field label{
+                width: 200px;
+                margin-right: 10px;
+                font-size: 14px;
+
+            }
+            .container .form .input_field .input,
+            .container .form .input_field .textarea{
+                width: 100%;
+                outline: none;
+                border: 1px solid #d5d5d5;
+                font-size: 10px;
+                padding: 8px 10px;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+            }
+
+            .container .form .input_field .textarea{
+                resize: none;
+                height: 70px;
+
+            }
+            .container .form .input_field .custom_radio{
+                position: relative;
+                
+                width: 100%;
+            }
+
+            .container .form .input_field .input:focus,
+            .container .form .input_field .textarea:focus,
+            .container .form .input_field select:focus{
+                border: 1px solid #fec107;
+
+            }
+            #next{
+                border-radius : 60px;
+                padding: 10px 15px;
+                background: rgb(40, 24, 252);
+                border: none;
+                outline: none;
+                color: white;
+                margin-top: 15px;
+
+            }
+            #next:hover{
+                background-color: rgb(12, 221, 221);
+                cursor: pointer;
+                color: black;
+            }
+
+            
+            #reset{
+                border-radius : 60px;
+                padding: 10px 15px;
+                background: rgb(40, 24, 252);
+                border: none;
+                outline: none;
+                color: white;
+                margin-top: 15px;
+                margin-left: 50px;
+
+            }
+            #reset:hover{
+                background-color: rgb(16, 247, 47);
+                cursor: pointer;
+                color: black;
+            }
+
+
+            /*Button Three*/
+            .button-three {
+                position: relative;
+                background-color: #f39c12;
+                border: none;
+                padding: 20px;
+                width: 200px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+            }
+
+            .button-three:hover{
+            background:#fff;
+            box-shadow:0px 2px 10px 5px #97B1BF;
+            color:#000;
+            }
+
+            .button-three:after {
+                content: "";
+                background: #f1c40f;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px !important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s
+            }
+
+            .button-three:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s
+            }            
+
+
+            @media (max-width:420px){
+                .container .form .input_field{
+                flex-direction: column;
+                align-items: flex-start;
+                }
+                .container .form .input_field{
+                    margin-bottom: 5px;
+                }
+            }
+
+        </style>
+        <form method="POST" action="{{ url_for('result')}}">   
+            <div class="container">
+                <div class ="title">
+                    REGISTERATION FORM
+                </div>
+
+                <div class="form">
+                    <div class="input_field">
+                        <label>Age</label>
+                        <input type="text" placeholder="Age" name="Age" class="input">
+                    </div>
+            
+                    <div class ="input_field">
+                        <label>Gender</label>
+                        <div class="custom_radio">
+                            <input type="radio" name = "Gender" value="1"> Male
+                            <input type="radio" name = "Gender" value="0"> Female </br> 
+                        </div>
+                    </div>
+
+                    <div class="input_field">
+                        <label>Total_Bilirubin</label>
+                        <input type="text" placeholder="Total_Bilirubin" name="Total_Bilirubin" class="input">
+                    </div>
+
+                    <div class="input_field">
+                        <label>Direct Bilirubin</label>
+                        <input type="text" placeholder="Direct_Bilirubin" name="Direct_Bilirubin" class="input">
+                    </div>
+                                    
+                    <div class="input_field">
+                        <label>Alkaline phosphotase </label>
+                        <input type="text" placeholder="Alkaline_phosphotase" class="input" name="Alkaline_Phosphotase"required>
+                    </div>
+
+                    <div class="input_field">
+                        <label>Alamine Aminotransferase</label>
+                        <input type="text" placeholder="Alamine_Aminotransferase" name="Alamine_Aminotransferase" class="input">
+                    </div>
+
+                    <div class="input_field">
+                        <label>Aspartate Aminotransferase</label>
+                        <input type="text" placeholder="Aspartate Aminotransferase" name="Aspartate_Aminotransferase" class="input">
+                    </div>
+
+                    <div class="input_field">
+                        <label>Total Protiens</label>
+                        <input type="text" placeholder="Total Protiens" name="Total_Protiens" maxlength="6" size="6" class="input" >
+                    </div>
+
+                    <div class="input_field">
+                        <label>Aluminb</label>
+                        <input type="text" placeholder="Aluminb" name="Aluminb" class="input">
+                    </div>
+
+                    <div class="input_field">
+                        <label>Albumin and Globulin Ratio</label>
+                        <input type="text" placeholder="Albumin and Globulin Ratio" name="Albumin_and_Globulin_Ratio" class="input">
+                    </div>
+                    
+                    <div>
+                    <button type = "submit" value = "Submit" class="button-three">SUBMIT</button>
+                    <form action="/predict">
+                        <button type = "reset" value = "reset" class="button-three">RESET</button>
+                    </form>                    
+                    </div>
+
+
+                </div>
+            </div>
+        </form>  
+    </head>
+</html>

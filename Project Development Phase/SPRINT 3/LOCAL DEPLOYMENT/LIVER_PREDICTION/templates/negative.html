@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #07252d;
+}
+/*Button Three*/
+.button-three {
+                position: relative;
+                background-color: #66f5fa;
+                border: none;
+                padding: 20px;
+                width: 200px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+            }
+
+            .button-three:hover{
+            background:rgb(51, 255, 0);
+            box-shadow:0px 2px 10px 5px #97B1BF;
+            color:#000;
+            border-radius: 30%;
+            }
+
+            .button-three:after {
+                content: "";
+                background: #207515;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px !important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: all 0.8s
+            }
+
+            .button-three:active:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s
+            }
+h2
+{
+    position: relative;
+    font-size: 300%;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 1s linear infinite;
+}
+footer
+{
+    position:
+}
+@keyframes animate
+{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4;
+        text-shadow: 0 0 20px #03bcf4;
+        text-shadow: 0 0 40px #03bcf4;
+        text-shadow: 0 0 80px #03bcf4;
+        text-shadow: 0 0 160px #03bcf4;
+    }
+}
+
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Predicted category</title>
+</head>
+<body>
+    
+    <div>
+        <header>
+            <div class = "predict">
+                <h2> PREDICTION RESULT IS NEGATIVE </h2><br><br><br><br>
+            </div>
+        </header>
+        <footer> 
+            <div>
+                <center><form action="/">
+                    <button type = "GOBACK" value = "reset" class="button-three">GO BACK</button>
+                </form></center>                    
+            </div>          
+        </footer>
+    </div>
+</body>
+</html>
