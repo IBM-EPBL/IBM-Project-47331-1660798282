@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<title>LIVER DISEASE</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://wallpaperaccess.com/full/1398385.jpg");
+  height: 100%;
+}
+h3
+{
+    
+    font: 20px "Lato", sans-serif;
+    position: relative;
+    font-size: 300%;
+    letter-spacing: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(46, 255, 28, 0.808));
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    100%
+    {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px #03bcf4;
+        text-shadow: 0 0 20px #03bcf4;
+        text-shadow: 0 0 40px #03bcf4;
+        text-shadow: 0 0 80px #03bcf4;
+        text-shadow: 0 0 160px #03bcf4;
+    }
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.button-three {
+  position: relative;
+  background-color: #09ff00;
+  letter-spacing: 5px;
+  font: 20px "Times New Roman", sans-serif;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.button-three:hover{
+  background:rgb(0, 255, 242);
+  box-shadow:0px 2px 10px 5px #00f7ff;
+  color:rgb(255, 0, 0);
+  border-radius: 30%;
+}
+
+.button-three:after {
+  content: "";
+  background: #73ff00;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.8s
+}
+
+.button-three:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+    <h3><b>LIVER DISEASE PREDICTION</b></h3><br>
+    <form method="GET" action="/predict">
+      <center><button class="button-three">PREDICT</button><br></center>
+    </form>
+     <p style="padding:5px 15px"></p>
+  </div>
+</div>
+
+</body>
+</html>
